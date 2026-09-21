@@ -1,0 +1,69 @@
+Aim
+To write a Python program to perform various string operations such as finding length, changing case, accessing characters, finding words, slicing, replacing, concatenating, checking substrings, and stripping spaces.
+
+Procedure
+1. Start the program.
+2. Create a string s = "My Name Is Shruti".
+3. Display the original string.
+4. Find and display the length of the string using len().
+5. Convert the string into uppercase using upper().
+6. Convert the string into lowercase using lower().
+7. Access and display a character at a specific index using indexing.
+8. Find the position of "Shruti" using find().
+9. Extract a portion of the string using slicing.
+10. Replace "Shruti" with "Celific" using replace().
+11. Check whether "Name" exists in the string using the in operator.
+12.Concatenate another string using the + operator.
+13. Create another string containing extra spaces.
+14. Remove the leading and trailing spaces using strip().
+15. Stop the program.
+
+#STRING OPERATIONS
+
+s = "My Name Is Shruti "
+print("Original String",s)
+
+#Find length
+print("Length of string is", len(s))
+
+#Convert uppercase
+print("Uppercase:",s.upper())
+
+#Convert lowercase
+print("Lowercase:",s.lower())
+
+#Get char at a position
+print("Character at index 6:",s[6])
+
+#Find position of a word
+print("Position of Shruti:",s.find("Shruti"))
+
+#Extract part of a string
+print("Slice:",s[6:13])
+
+#Replace a word
+print("Replace:",s.replace("Shruti","Celific"))
+
+#Check whether a word exists
+print("Contains Name:","Name" in s)
+
+#Concatenate two strings
+print("Concatination:",s + " Manjunath")
+
+#Stripping
+s2 = "   Hello  World   "
+print("Strip:",s2.strip())
+
+Original String My Name Is Shruti 
+Length of string is 18
+Uppercase: MY NAME IS SHRUTI 
+Lowercase: my name is shruti 
+Character at index 6: e
+Position of Shruti: 11
+Slice: e Is Sh
+Replace: My Name Is Celific 
+Contains Name: True
+Concatination: My Name Is Shruti  Manjunath
+Strip: Hello  World
+
+
