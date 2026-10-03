@@ -1,0 +1,104 @@
+Aim:
+To write a Python program to perform basic dictionary operations such as accessing, adding, updating, deleting, and using dictionary methods, and to find the frequency of each character in a string.
+
+Algorithm:
+1. Start
+2. Create a dictionary emp containing the employee's name, age, salary, and department.
+3. Display the complete dictionary.
+4. Access and display the values of name, age, salary, and department.
+5. Add a new key ph no with a phone number.
+6. Update the value of sal.
+7. Delete the dept key using del.
+8. Display the keys, values, and items of the dictionary.
+9. Access the name using get().
+10. Use get() to access dept; if it is not available, display "not available".
+11. Update the age and ph no using update().
+12. Take a string as input from the user.
+13. Create an empty dictionary called frequency.
+14. Read each character of the string one by one.
+15. If the character already exists in frequency, increase its count by 1.
+16. Otherwise, add the character to the dictionary with count 1.
+17. Display each character and its frequency.
+18. Stop.
+
+Code:
+emp = {"name":"rahul", "age":35, "sal":50000, "dept":"IT"}
+
+print("the dictionary is: ",emp)
+
+#accessing
+print("name: ",emp["name"])
+print("age: ",emp["age"])
+print("salary: ",emp["sal"])
+print("department: ",emp["dept"])
+
+#add, update, delete
+emp["ph no"] = 9988776655
+print("after adding : ",emp)
+
+emp["sal"] = 60000
+print("after updating : ",emp)
+
+del emp["dept"]
+print("after deleting : ",emp)
+
+#methods
+print("keys: ")
+print(emp.keys())
+
+print("values: ")
+print(emp.values())
+
+print("items: ")
+print(emp.items())
+
+print("name: ",emp.get("name"))
+print("dept: ",emp.get("dept","not available"))
+
+emp.update({"age":36,"ph no":8567849043})
+print("after update")
+print(emp)
+
+#frequency
+
+text = input("enter the string: ")
+
+frequency = {}
+
+for ch in text:
+    if ch in frequency:
+        frequency[ch] = frequency[ch]+1
+    else:
+        frequency[ch] = 1
+
+print("character frequency")
+for ch, count in frequency.items():
+    print(ch,":",count)
+
+
+Output:
+the dictionary is: {'name': 'rahul', 'age': 35, 'sal': 50000, 'dept': 'IT'}
+name: rahul
+age: 35
+salary: 50000
+department: IT
+after adding : {'name': 'rahul', 'age': 35, 'sal': 50000, 'dept': 'IT', 'ph no': 9988776655}
+after updating : {'name': 'rahul', 'age': 35, 'sal': 60000, 'dept': 'IT', 'ph no': 9988776655}
+after deleting : {'name': 'rahul', 'age': 35, 'sal': 60000, 'ph no': 9988776655}
+keys:
+dict_keys(['name', 'age', 'sal', 'ph no'])
+values:
+dict_values(['rahul', 35, 60000, 9988776655])
+items:
+dict_items([('name', 'rahul'), ('age', 35), ('sal', 60000), ('ph no', 9988776655)])
+name: rahul
+dept: not available
+after update
+{'name': 'rahul', 'age': 36, 'sal': 60000, 'ph no': 8567849043}
+enter the string: worry
+character frequency
+w : 1
+o : 1
+r : 1
+y : 1
+
