@@ -1,1 +1,57 @@
+Aim:
+To write a Python program to perform basic tuple operations and to convert a tuple into a list and back into a tuple.
 
+Algorithm:
+Start
+Create a tuple t containing the values 10, 20, 30, 40, 50.
+Display the complete tuple.
+Display the first element using index 0.
+Display the last element using index -1.
+Find and display the length of the tuple using len().
+Count how many times 20 occurs using count().
+Find the index position of 30 using index().
+Find and display the maximum value using max().
+Find and display the minimum value using min().
+Find and display the sum of all elements using sum().
+Check whether 40 is present in the tuple using the in operator.
+Convert the tuple into a list using list().
+Display the converted list.
+Convert the list back into a tuple using tuple().
+Display the converted tuple.
+Stop.
+
+Code:
+t=(10,20,30,40,50)
+
+print("tuple : ",t)
+print("first element : ",t[0])
+print("last element : ",t[-1])
+print("length : ",len(t))
+print("count of 20 : ",t.count(20))
+print("index of 30 : ",t.index(30))
+print("maximum : ",max(t))
+print("minimum : ",min(t))
+print("sum : ",sum(t))
+print("is 40 present? ",40 in t)
+
+#convert to list
+l=list(t)
+print("converted tuple to list",l)
+
+#convert list back to tuple
+t2=tuple(l)
+print("list converted to tuple: ",t2)
+
+Output:
+tuple : (10, 20, 30, 40, 50)
+first element : 10
+last element : 50
+length : 5
+count of 20 : 1
+index of 30 : 2
+maximum : 50
+minimum : 10
+sum : 150
+is 40 present? True
+converted tuple to list [10, 20, 30, 40, 50]
+list converted to tuple: (10, 20, 30, 40, 50)
